@@ -33,13 +33,14 @@ const object = {
 Output:
 
 ```txt
-// access deeply nested values
-object.user.posts.comments
+// key
+user.posts.comments
 ```
 
 The result would be as shown below
 
 ```txt
+//value
 'Your article is inspiring'
 ```
 
