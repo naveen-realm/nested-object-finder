@@ -1,0 +1,37 @@
+The sample of deeply nested object:
+
+     object = {
+                  user: {
+                           posts: {
+                                     comments : 'Your article is inspiring'
+                                  }
+                        }
+               }
+
+Output:
+
+The key will be : 
+
+user.posts.comments
+
+The result would be as shown below:
+
+'Your article is inspiring'
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Scenario 1: Key exists in the object
+
+var object2 = {"user":{"posts":{"comments":"your article is inspiring"}}};
+console.log("Result at 'user.posts.comments': ",_.get(object2, 'user.posts.comments')); // result is 'your article is inspiring'
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Scenario 2: key does not exists in the object and default value is not provided
+
+var object2 = {"user":{"posts":{"comments":"your article is inspiring"}}};
+console.log("Result at 'user.posts.name': ",_.get(object2, 'user.posts.name')); // undefined will be returned as result
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Scenario 3: key does not exists in the object and default value is provided
+
+var object2 = {"user":{"posts":{"comments":"your article is inspiring"}}};
+console.log("Result at 'user.posts.name': ",_.get(object2, 'user.posts.name', 'Not found')); // 'Not found' will be returned as result
